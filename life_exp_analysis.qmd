@@ -1,0 +1,10 @@
+---
+title: "Life Expectancy"
+format: html
+editor: visual
+date: today
+---
+
+```{r}
+library(tidyverse)
+```
