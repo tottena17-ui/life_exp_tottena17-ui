@@ -5,6 +5,26 @@ editor: visual
 date: today
 ---
 
+## Life Expectancy Analysis
+
+Here is the code to organize the data for analysis.
+
 ```{r}
 library(tidyverse)
+library(gapminder)
+data(gapminder_unfiltered)
+head(gapminder_unfiltered)
+```
+
+```{r}
+sumdat = gapminder_unfiltered %>%
+  select(year, country, lifeExp) %>% 
+  group_by(year) %>% 
+  filter(lifeExp == max(lifeExp)) %>% 
+  arrange(year)
+sumdat
+```
+
+```{r}
+
 ```
